@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping(path = "/api/products")
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping
     public List<Product> getAllProducts(){
         return productService.getAllProducts();
     }
@@ -35,7 +35,8 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteProduct(@PathVariable Long id) {
+    public String deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
+        return "Product Deleted Successfully";
     }
 }
