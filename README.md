@@ -12,8 +12,8 @@ This project is a Spring Boot-based RESTful API that allows users to perform CRU
 
 ## Features And EndPoints
 
-- Create a new product with name and price 
-- Retrieve a product by its ID.
-- Retrieve a list of all products.
-- Update a product's name and/or price.
-- Delete a product by its ID.
+- Create a new product with name and price (POST /api/products)
+- Retrieve a product by its ID  (GET /api/products/{id})
+- Retrieve a list of all products (GET /api/products)
+- Update a product's name and/or price  (PUT /api/products/{id})
+- Delete a product by its ID (DELETE /api/products/{id})
